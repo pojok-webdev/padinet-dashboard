@@ -1,0 +1,4 @@
+node_modules/
+documentation/
+__MACOSX
+package-lock.json
