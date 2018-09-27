@@ -24,7 +24,7 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ShowNodePropertyDialogComponent } from './show-node-property-dialog/show-node-property-dialog.component';
 import { PadiCytoscape } from 'padicytoscape';
-import { MatDialogModule, MatInputModule, MatSelectModule, MatTabsModule } from '@angular/material';
+import { MatDialogModule, MatInputModule, MatSelectModule, MatTabsModule, MatIconModule } from '@angular/material';
 import { MatTableModule } from '@angular/material/table'
 import { HttpClientModule } from '@angular/common/http';
 import { NodeService } from './node.service';
@@ -48,6 +48,7 @@ import { NodeInfoComponent } from './node-info/node-info.component';
     MatSelectModule,
     MatTableModule,
     MatTabsModule,
+    MatIconModule,
     AppRoutingModule,
     /*AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
