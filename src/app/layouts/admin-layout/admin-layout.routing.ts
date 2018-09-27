@@ -14,6 +14,7 @@ import { SurveysComponent } from '../../surveys/surveys.component';
 import { InstallsComponent } from '../../installs/installs.component';
 import { TroubleshootsComponent } from '../../troubleshoots/troubleshoots.component';
 import { SalesComponent } from '../../sales/sales.component';
+import { TableviewComponent } from '../../tableview/tableview.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -67,6 +68,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     {path:'infrastructure',component:InfrastructureComponent},
+    {path:'tableview',component:TableviewComponent},
     {path:'tickets',component:TicketsComponent},
     {path:'surveys',component:SurveysComponent},
     {path:'installs',component:InstallsComponent},

@@ -19,6 +19,9 @@ import {
   MatTooltipModule,
   MatTableModule,
   MatTabsModule,
+  MatIconModule,
+  MatOptionModule,
+  MatSelectModule,
 } from '@angular/material';
 import { TicketsComponent } from '../../tickets/tickets.component';
 import { SurveysComponent } from '../../surveys/surveys.component';
@@ -26,6 +29,7 @@ import { InstallsComponent } from '../../installs/installs.component';
 import { TroubleshootsComponent } from '../../troubleshoots/troubleshoots.component';
 import { SalesComponent } from '../../sales/sales.component';
 import { InfrastructureComponent } from '../../infrastructure/infrastructure.component';
+import { TableviewComponent } from '../../tableview/tableview.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -36,6 +40,9 @@ import { InfrastructureComponent } from '../../infrastructure/infrastructure.com
     MatInputModule,
     MatTooltipModule,
     MatTableModule,
+    MatIconModule,
+    MatOptionModule,
+    MatSelectModule,
     MatTabsModule
   ],
   declarations: [
@@ -48,6 +55,7 @@ import { InfrastructureComponent } from '../../infrastructure/infrastructure.com
     NotificationsComponent,
     UpgradeComponent,
     InfrastructureComponent,
+    TableviewComponent,
     TicketsComponent,
     SurveysComponent,
     InstallsComponent,
