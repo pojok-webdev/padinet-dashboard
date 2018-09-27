@@ -63,7 +63,7 @@ import { NodeInfoComponent } from './node-info/node-info.component';
     EdgeInfoComponent,
     NodeInfoComponent,
   ],
-  entryComponents:[EdgeInfoComponent,NodeInfoComponent],
+  entryComponents:[EdgeInfoComponent,NodeInfoComponent,AddLinkDialogComponent,AddBtsDialogComponent],
   providers: [PadiCytoscape,NodeService,EdgeService,AppvarService],
   bootstrap: [AppComponent]
 })

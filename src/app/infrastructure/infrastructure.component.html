@@ -1,11 +1,15 @@
-<button mat-button> Graph View</button>
-<button mat-button routerLink="/tickets"> Table View</button>
 
-
-
-<a class="nav-link" routerLink="/tableview">
+<a mat-button (click)="addNode()">
+    <i class="material-icons">navigation</i>
+    <p> Add Node</p>
+</a>
+<a mat-button (click)="addLink()">
+    <i class="material-icons">show_chart</i>
+    <p> Add Link</p>
+</a>
+<a mat-button class="nav-link" routerLink="/tableview">
     <i class="material-icons">reorder</i>
-    <p>Table View</p>
+    <p> Table View</p>
 </a>
 
 

@@ -1,3 +1,50 @@
 <p>
-  add-link-dialog works!
-</p>
+    Add Edge
+  </p>
+  <mat-form-field class="full-width">
+    <input type="text" matInput [(ngModel)]="obj.name" placeholder="Name">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-select placeholder="Network Node" [(ngModel)]="obj.networknode">
+      <mat-option value="{{networknode.id}}" *ngFor="let networknode of networknodes">{{networknode.name}}</mat-option>
+    </mat-select>    
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-select placeholder="Source" [(ngModel)]="obj.source">
+      <mat-option value="{{bts.id}}" *ngFor="let bts of btses">{{bts.name}}</mat-option>
+    </mat-select>  
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input type="text" matInput [(ngModel)]="obj.source_ipaddr" placeholder="IP Address">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-select placeholder="Target" [(ngModel)]="obj.target">
+      <mat-option value="{{bts.id}}" *ngFor="let bts of btses">{{bts.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input type="text" matInput [(ngModel)]="obj.target_ipaddr" placeholder="IP Address">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-select placeholder="Link Type" [(ngModel)]="obj.linktype">
+      <mat-option value="{{linkType.id}}" *ngFor="let linkType of linkTypes">{{linkType.name}}</mat-option>
+    </mat-select>    
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-select placeholder="Vendor" [(ngModel)]="obj.vendor">
+      <mat-option value="{{vendor.id}}" *ngFor="let vendor of vendors">{{vendor.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input type="text" matInput [(ngModel)]="obj.utility" placeholder="Utility">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input type="text" matInput [(ngModel)]="obj.capacity" placeholder="Capacity">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input type="text" matInput [(ngModel)]="obj.description" placeholder="Description">
+  </mat-form-field>
+  
+  
+  <button mat-button (click)="saveEdge(obj)">Save</button>
+  
