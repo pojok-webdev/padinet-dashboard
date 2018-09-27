@@ -16,9 +16,9 @@ export class NodeInfoComponent implements OnInit {
      id:1,name:"",location:"" 
     }
     neighboursDataSource = [
-      {name:"A"},
-      {name:"B"},
-      {name:"C"}
+      {name:"A",address:'',city:'',capacity:'',vendor:''},
+      {name:"B",address:'',city:'',capacity:'',vendor:''},
+      {name:"C",address:'',city:'',capacity:'',vendor:''}
    ]
    /*
    1 IP_Transit 2 Core 3 BTS 4 AP 5 Client

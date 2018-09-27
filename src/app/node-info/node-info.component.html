@@ -28,33 +28,33 @@
     <button mat-button (click)="removeComponent(component)">Remove</button>    
   </mat-tab>
   <mat-tab label="Neighbours ({{neighboursDataSource.length}})">
-      <mat-table [dataSource]="neighboursDataSource" class="full-width">
+      <mat-table #table [dataSource]="neighboursDataSource" class="full-width">
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef>Name</th>
-          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+          <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="address">
-          <th mat-header-cell *matHeaderCellDef>Address</th>
-          <td mat-cell *matCellDef="let element">{{element.address}}</td>
+          <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.address}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="city">
-          <th mat-header-cell *matHeaderCellDef>City</th>
-          <td mat-cell *matCellDef="let element">{{element.city}}</td>
+          <mat-header-cell *matHeaderCellDef>City</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.city}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="capacity">
-          <th mat-header-cell *matHeaderCellDef>Capacity</th>
-          <td mat-cell *matCellDef="let element">{{element.capacity}}</td>
+          <mat-header-cell *matHeaderCellDef>Capacity</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.capacity}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="vendor">
-          <th mat-header-cell *matHeaderCellDef>Vendor</th>
-          <td mat-cell *matCellDef="let element">{{element.vendor}}</td>
+          <mat-header-cell *matHeaderCellDef>Vendor</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.vendor}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="link">
-          <th mat-header-cell *matHeaderCellDef>Link</th>
-          <td mat-cell *matCellDef="let element">{{element.lnk}}</td>
+          <mat-header-cell *matHeaderCellDef>Link</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.lnk}}</mat-cell>
         </ng-container>
-        <tr mat-header-row *matHeaderRowDef="neighbourColumns"></tr>
-      <tr mat-row *matRowDef="let row;columns:neighbourColumns"></tr>
+        <mat-header-row *matHeaderRowDef="neighbourColumns"></mat-header-row>
+      <mat-row *matRowDef="let row;columns:neighbourColumns"></mat-row>
     </mat-table>
   </mat-tab>
 </mat-tab-group>
