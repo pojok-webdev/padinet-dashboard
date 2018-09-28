@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent implements OnInit {
-
+  allsales = [
+    {"name":"amir"},
+    {name:"aris"},
+    {name:"ayu"},
+    {name:"dwi"},
+    {name:"dhita"},
+    {name:"yudhi"}
+  ]
   constructor() { }
 
   ngOnInit() {

@@ -34,6 +34,11 @@ import { AddLinkDialogComponent } from './add-link-dialog/add-link-dialog.compon
 import { AddBtsDialogComponent } from './add-bts-dialog/add-bts-dialog.component';
 import { EdgeInfoComponent } from './edge-info/edge-info.component';
 import { NodeInfoComponent } from './node-info/node-info.component';
+import { TicketService } from './ticket.service';
+import { SurveyService } from './survey.service';
+import { InstallService } from './install.service';
+import { TroubleshootService } from './troubleshoot.service';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -64,7 +69,17 @@ import { NodeInfoComponent } from './node-info/node-info.component';
     NodeInfoComponent,
   ],
   entryComponents:[EdgeInfoComponent,NodeInfoComponent,AddLinkDialogComponent,AddBtsDialogComponent],
-  providers: [PadiCytoscape,NodeService,EdgeService,AppvarService],
+  providers: [
+    PadiCytoscape,
+    NodeService,
+    EdgeService,
+    AppvarService,
+    TicketService,
+    SurveyService,
+    InstallService,
+    TroubleshootService,
+    SidebarComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

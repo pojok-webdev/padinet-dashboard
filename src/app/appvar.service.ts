@@ -6,6 +6,9 @@ export class AppvarService {
   host = 'localhost'
   port = '1948'
   server = 'http://'+this.host+':'+this.port+'/'
+  dashboardHost = 'localhost'
+  dashboardPort = '1945'
+  dashboardServer = 'http://'+this.dashboardHost+':'+this.dashboardPort+'/'
   constructor() { }
 
 }

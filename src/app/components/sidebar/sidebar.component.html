@@ -55,37 +55,37 @@
     </ul>
   </div>
     <ul class="nav">
-        <li>
+        <li routerLinkActive="active">
             <a class="nav-link" routerLink="/infrastructure">
                 <i class="material-icons">group_work</i>
                 <p>Infrastructure</p>
             </a>
         </li>
-        <li>
+        <li routerLinkActive="active">
             <a class="nav-link" routerLink="/tickets">
                 <i class="material-icons">theaters</i>
                 <p>Tickets</p>
             </a>
         </li>
-        <li>
+        <li routerLinkActive="active">
             <a class="nav-link" routerLink="/surveys">
                 <i class="material-icons">visibility</i>
                 <p>Surveys</p>
             </a>
         </li>
-        <li>
+        <li routerLinkActive="active" class="" (click)="setActive(install)">
             <a class="nav-link" routerLink="/installs">
                 <i class="material-icons">check_box</i>
                 <p>Instalasi</p>
             </a>
         </li>
-        <li>
+        <li routerLinkActive="active" class="">
             <a class="nav-link" routerLink="/troubleshoots">
                 <i class="material-icons">settings_applications</i>
                 <p>Troubleshoot</p>
             </a>
         </li>
-        <li routerLinkActive="active" class="">
+        <li routerLinkActive="active" class="" (click)="setActive('sales')">
             <a class="nav-link" routerLink="/sales">
                 <i class="material-icons">poll</i>
                 <p>Sales</p>

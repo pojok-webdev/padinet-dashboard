@@ -31,109 +31,26 @@
                                         </th>
                                         </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr *ngFor="let i of [0,1,2,3,4]">
                                             <td>
-                                                FFR
+                                                {{ticketdaily[i].name}}
                                             </td>
                                             <td>
-                                                Dakota Rice
+                                                {{ticketdaily[i].val}}
                                             </td>
                                             <td>
-                                                Niger
+                                                {{ticketweekly[i].val}}
                                             </td>
                                             <td>
-                                                Oud-Turnhout
+                                                {{ticketmonthly[i].val}}
                                             </td>
                                             <td>
-                                                $36,738
+                                                {{ticketquarterly[i].val}}
                                             </td>
                                             <td>
-                                                $36,738
+                                                {{ticketyearly[i].val}}
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Platinum
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Oud-Turnhout
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Gold
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Oud-Turnhout
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td>
-                                                Bronze
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Oud-Turnhout
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Silver
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Niger
-                                            </td>
-                                            <td>
-                                                Oud-Turnhout
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                            <td>
-                                                $36,738
-                                            </td>
-                                        </tr>
-    
+                                        </tr>    
                                     </tbody>
                                 </table>
                             </div>
