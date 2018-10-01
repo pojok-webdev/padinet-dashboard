@@ -11,7 +11,7 @@ export class SalesService {
     private http : HttpClient,
     private appvar : AppvarService
   ) { }
-  gets(callback){
+  getVisits(callback){
     this.obj = this.http.get(this.appvar.salesAdminServer+'visitgets')
     this.obj.subscribe(
       data => {
@@ -22,7 +22,7 @@ export class SalesService {
       }
     )
   }
-  get(obj,callback){
+  getVisit(obj,callback){
     this.obj = this.http.get(this.appvar.salesAdminServer+'visitget/'+obj.id)
     this.obj.subscribe(
       data => {
@@ -44,7 +44,7 @@ export class SalesService {
       }
     )
   }
-  update(visit, callback){
+  updateVisit(visit, callback){
     this.obj = this.http.post(this.appvar.salesAdminServer+'visitupdate',visit)
     this.obj.subscribe(
       data => {
@@ -55,7 +55,7 @@ export class SalesService {
       }
     )
   }
-  remove(visit,callback){
+  removeVisit(visit,callback){
     this.obj = this.http.get(this.appvar.salesAdminServer+'visitremove/'+visit.id)
     this.obj.subscribe(
       data => {
@@ -66,4 +66,63 @@ export class SalesService {
       }
     )
   }
+
+
+
+  getOffers(callback){
+    this.obj = this.http.get(this.appvar.salesAdminServer+'offergets')
+    this.obj.subscribe(
+      data => {
+        callback(data)
+      },
+      err => {
+        callback(err)
+      }
+    )
+  }
+  getOffer(obj,callback){
+    this.obj = this.http.get(this.appvar.salesAdminServer+'offerget/'+obj.id)
+    this.obj.subscribe(
+      data => {
+        callback(data)
+      },
+      err => {
+        callback(err)
+      }
+    )
+  }
+  saveOffer(obj,callback){
+    this.obj = this.http.post(this.appvar.salesAdminServer+'offersave',obj)
+    this.obj.subscribe(
+      data => {
+        callback(data)
+      },
+      err => {
+        callback(err)
+      }
+    )
+  }
+  updateOffer(obj,callback){
+    this.obj = this.http.post(this.appvar.salesAdminServer+'offerupdate',obj)
+    this.obj.subscribe(
+      data => {
+        callback(data)
+      },
+      err => {
+        callback(err)
+      }
+    )
+  }
+  removeOffer(obj,callback){
+    this.obj = this.http.get(this.appvar.salesAdminServer+'offerremove'+obj.id)
+    this.obj.subscribe(
+      data => {
+        callback(data)
+      },
+      err => {
+        callback(err)
+      }
+    )
+  }
+
 }

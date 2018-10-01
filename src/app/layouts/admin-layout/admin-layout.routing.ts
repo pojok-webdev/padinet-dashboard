@@ -17,6 +17,7 @@ import { SalesComponent } from '../../sales/sales.component';
 import { TableviewComponent } from '../../tableview/tableview.component';
 import { AdminVisitComponent } from '../../admin-visit/admin-visit.component';
 import { AdminVisitsComponent } from '../../admin-visits/admin-visits.component';
+import { AdminOffersComponent } from '../../admin-offers/admin-offers.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -77,5 +78,6 @@ export const AdminLayoutRoutes: Routes = [
     {path:'troubleshoots',component:TroubleshootsComponent},
     {path:'sales',component:SalesComponent},
     {path:'adminvisit',component:AdminVisitComponent},
-    {path:'adminvisits',component:AdminVisitsComponent}
+    {path:'adminvisits',component:AdminVisitsComponent},
+    {path:'adminoffers',component:AdminOffersComponent}
 ];

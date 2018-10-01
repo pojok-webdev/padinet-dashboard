@@ -32,6 +32,7 @@ import { InfrastructureComponent } from '../../infrastructure/infrastructure.com
 import { TableviewComponent } from '../../tableview/tableview.component';
 import { AdminVisitComponent } from '../../admin-visit/admin-visit.component';
 import { AdminVisitsComponent } from '../../admin-visits/admin-visits.component';
+import { AdminOffersComponent } from '../../admin-offers/admin-offers.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -64,7 +65,9 @@ import { AdminVisitsComponent } from '../../admin-visits/admin-visits.component'
     TroubleshootsComponent,
     SalesComponent,
     AdminVisitComponent,
-    AdminVisitsComponent
+    AdminVisitsComponent,
+    AdminOffersComponent,
+
   ]
 })
 
