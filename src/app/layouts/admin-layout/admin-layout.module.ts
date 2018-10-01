@@ -30,6 +30,8 @@ import { TroubleshootsComponent } from '../../troubleshoots/troubleshoots.compon
 import { SalesComponent } from '../../sales/sales.component';
 import { InfrastructureComponent } from '../../infrastructure/infrastructure.component';
 import { TableviewComponent } from '../../tableview/tableview.component';
+import { AdminVisitComponent } from '../../admin-visit/admin-visit.component';
+import { AdminVisitsComponent } from '../../admin-visits/admin-visits.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -60,7 +62,9 @@ import { TableviewComponent } from '../../tableview/tableview.component';
     SurveysComponent,
     InstallsComponent,
     TroubleshootsComponent,
-    SalesComponent
+    SalesComponent,
+    AdminVisitComponent,
+    AdminVisitsComponent
   ]
 })
 

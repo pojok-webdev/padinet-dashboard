@@ -1,5 +1,20 @@
+
 <div class="main-content">
     <div class="container-fluid">
+        <div class="row">
+            <a mat-button (click)="addLink()">
+                <i class="material-icons">show_chart</i>
+                <p> Add Penawaran</p>
+            </a>
+            <a mat-button class="nav-link" routerLink="/adminvisit">
+                <i class="material-icons">reorder</i>
+                <p> Add Visit</p>
+            </a>
+            <a mat-button class="nav-link" routerLink="/adminvisits">
+                <i class="material-icons">reorder</i>
+                <p> Show Visits</p>
+            </a>
+        </div>
         <div class="row" *ngFor="let sales of allsales">
             <div class="col-md-12">
                 <div class="card card-plain">

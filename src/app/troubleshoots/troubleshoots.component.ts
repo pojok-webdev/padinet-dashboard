@@ -17,7 +17,6 @@ export class TroubleshootsComponent implements OnInit {
     private troubleshootservice:TroubleshootService,
     private sidebar: SidebarComponent
   ) {
-    this.sidebar.setActive(this.sidebar.troubleshoot)
     this.troubleshootservice.troubleshootdaily(result => {
       this.troubleshootdaily = result
     })

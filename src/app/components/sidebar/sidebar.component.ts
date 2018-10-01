@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -27,31 +26,11 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
-  troubleshoot = 'active'
-  sales = ''
-  install = ''
-  constructor(
-      private activatedRoute: ActivatedRoute
-  ) {
-      console.log("Activated Route",this.activatedRoute.url)
-  }
-    resetMenus(){
-        this.troubleshoot = ''
-        this.sales = ''
-        this.install = ''
-    }
+
+  constructor() { }
+
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
-    console.log("this menu items",this.menuItems)
-    this.activatedRoute.queryParams.subscribe(queryParams => {
-        // do something with the query params
-        console.log("queryParams",queryParams)
-	});
-
-	this.activatedRoute.params.subscribe(routeParams => {
-        //this.loadUserDetail(routeParams.id);
-        console.log("RouteParams",routeParams)
-	});
   }
   isMobileMenu() {
       if ($(window).width() > 991) {
@@ -59,9 +38,4 @@ export class SidebarComponent implements OnInit {
       }
       return true;
   };
-  setActive(menu){
-      console.log("you choose",menu)
-      this.resetMenus()
-      menu = 'active'
-  }
 }

@@ -1,0 +1,47 @@
+<mat-form-field class="ninetypercent">
+    <input type="text" matInput [(ngModel)]="searchBox" placeholder="Search" (keyup)="applyFilter($event.target.value)" class="searchInput">
+  </mat-form-field>
+  <button mat-button (click)="clearSearchbox()"><mat-icon svgIcon="backbutton"></mat-icon></button>
+  
+  <mat-table [dataSource]="dataSource" class="full-width">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="source">
+      <mat-header-cell *matHeaderCellDef>Source</mat-header-cell>
+      <mat-cell *matCellDef="let element" routerLink="/tableview/node/{{element.source}}" class="padipointer">{{element.hsource}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="saddress">
+      <mat-header-cell *matHeaderCellDef>Source Addr</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.saddress}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="scity">
+      <mat-header-cell *matHeaderCellDef>Source City</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.scity}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="target">
+      <mat-header-cell *matHeaderCellDef>Target</mat-header-cell>
+      <mat-cell *matCellDef="let element" routerLink="/tableview/node/{{element.target}}" class="padipointer">{{element.htarget}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="taddress">
+      <mat-header-cell *matHeaderCellDef>Target Addr</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.taddress}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="tcity">
+      <mat-header-cell *matHeaderCellDef>T City</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.tcity}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-select placeholder="Aksi">
+          <mat-option (click)="editEdge(element)">Info</mat-option>
+          <mat-option (click)="removeEdge(element)">Hapus</mat-option>
+        </mat-select>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="columnDisplayed"></mat-header-row>
+    <mat-row *matRowDef="let row;columns:columnDisplayed"></mat-row>
+  </mat-table>
+  

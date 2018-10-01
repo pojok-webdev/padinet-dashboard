@@ -39,6 +39,7 @@ import { SurveyService } from './survey.service';
 import { InstallService } from './install.service';
 import { TroubleshootService } from './troubleshoot.service';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SalesService } from './sales.service';
 
 @NgModule({
   imports: [
@@ -78,7 +79,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     SurveyService,
     InstallService,
     TroubleshootService,
-    SidebarComponent
+    SidebarComponent,
+    SalesService
   ],
   bootstrap: [AppComponent]
 })

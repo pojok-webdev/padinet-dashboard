@@ -1,0 +1,67 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Save Visit</h4>
+                      <p class="card-category">Admin Tool</p>
+                  </div>
+                  <div class="card-body">
+                          <div class="row">
+                              <div class="col-md-5">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Company" [(ngModel)]="visit.client">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Address" [(ngModel)]="visit.address">
+                                  </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="PIC" type="text" [(ngModel)]="visit.pic">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Position" type="text" [(ngModel)]="visit.position">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Phone" type="text" [(ngModel)]="visit.phone">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <mat-select matInput placeholder="Transport" type="text" [(ngModel)]="visit.transport">
+                                    <mat-option value=0>Mobil Pribadi</mat-option>
+                                    <mat-option value=1>Motor Pribadi</mat-option>
+                                    <mat-option value=2>Mobil Kantor</mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                   <textarea matInput placeholder="Purpose / Description" [(ngModel)]="visit.aim"></textarea>
+                                 </mat-form-field>
+                              </div>
+                          </div>
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="save(visit)">Save</button>
+                          <div class="clearfix"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
