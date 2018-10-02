@@ -95,9 +95,11 @@ export class SalesService {
     this.obj = this.http.post(this.appvar.salesAdminServer+'offersave',obj)
     this.obj.subscribe(
       data => {
+        console.log("Save Offer",data)
         callback(data)
       },
       err => {
+        console.log("Save Offer",err)
         callback(err)
       }
     )

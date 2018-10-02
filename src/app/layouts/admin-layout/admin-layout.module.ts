@@ -33,6 +33,8 @@ import { TableviewComponent } from '../../tableview/tableview.component';
 import { AdminVisitComponent } from '../../admin-visit/admin-visit.component';
 import { AdminVisitsComponent } from '../../admin-visits/admin-visits.component';
 import { AdminOffersComponent } from '../../admin-offers/admin-offers.component';
+import { AdminAddOfferComponent } from '../../admin-add-offer/admin-add-offer.component';
+import { AdminAddVisitComponent } from '../../admin-add-visit/admin-add-visit.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -67,6 +69,8 @@ import { AdminOffersComponent } from '../../admin-offers/admin-offers.component'
     AdminVisitComponent,
     AdminVisitsComponent,
     AdminOffersComponent,
+    AdminAddVisitComponent,
+    AdminAddOfferComponent,
 
   ]
 })
