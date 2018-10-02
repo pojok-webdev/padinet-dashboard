@@ -1,0 +1,47 @@
+<mat-form-field class="ninetypercent">
+        <input type="text" matInput [(ngModel)]="searchBox" placeholder="Search" (keyup)="applyFilter($event.target.value)" class="searchInput">
+      </mat-form-field>
+      <button mat-button (click)="clearSearchbox()"><mat-icon svgIcon="backbutton"></mat-icon></button>
+      
+      <mat-table [dataSource]="dataSource" class="full-width">
+        <ng-container matColumnDef="kdoffer">
+          <mat-header-cell *matHeaderCellDef>Kode Offering</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.kdoffer}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="clientname">
+          <mat-header-cell *matHeaderCellDef>Client Name</mat-header-cell>
+          <mat-cell *matCellDef="let element" class="padipointer">{{element.clientname}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="address">
+          <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.address}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="pic">
+          <mat-header-cell *matHeaderCellDef>PIC</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.pic}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+          <mat-cell *matCellDef="let element" class="padipointer">{{element.email}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef>Phone</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.phone}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="service">
+          <mat-header-cell *matHeaderCellDef>Service</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.service}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="action">
+          <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-select placeholder="Aksi">
+              <mat-option (click)="editEdge(element)">Info</mat-option>
+              <mat-option (click)="removeEdge(element)">Hapus</mat-option>
+            </mat-select>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="columnDisplayed"></mat-header-row>
+        <mat-row *matRowDef="let row;columns:columnDisplayed"></mat-row>
+      </mat-table>
+      
